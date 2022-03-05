@@ -31,9 +31,11 @@ CREATE TABLE `materia_prima` (
   `Categoria_Id` int NOT NULL,
   `Valor` varchar(5) NOT NULL,
   `Fornecedor_Id` int NOT NULL,
+  `Nome` varchar(200) NOT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Id_UNIQUE` (`Id`),
   UNIQUE KEY `Marca_UNIQUE` (`Marca`),
+  UNIQUE KEY `Nome_UNIQUE` (`Nome`),
   KEY `FK_MP_CMP_idx` (`Categoria_Id`),
   KEY `FK_PM_Fornecedor_idx` (`Fornecedor_Id`),
   CONSTRAINT `FK_MP_CMP` FOREIGN KEY (`Categoria_Id`) REFERENCES `categoria_materia_prima` (`Id`),
@@ -59,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-04 23:00:30
+-- Dump completed on 2022-03-04 23:53:53
