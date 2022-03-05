@@ -1,3 +1,0 @@
-C:\Projetos\sales_system\Sales.System.UI\Sales.System.UI\obj\Debug\Sales.System.UI.Properties.Resources.resources
-C:\Projetos\sales_system\Sales.System.UI\Sales.System.UI\obj\Debug\Sales.System.UI.csproj.GenerateResource.cache
-C:\Projetos\sales_system\Sales.System.UI\Sales.System.UI\obj\Debug\Sales.System.UI.csproj.CoreCompileInputs.cache

@@ -1,11 +1,10 @@
-﻿using Sales.System.UI.Formularios.MateriaPrima;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sales.System.UI
+namespace SalesSystemUI
 {
     static class Program
     {
@@ -17,7 +16,7 @@ namespace Sales.System.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadastrarMateriaPrima());
+            Application.Run(new Form1());
         }
     }
 }

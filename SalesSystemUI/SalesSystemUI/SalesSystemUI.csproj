@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{067E6C51-058B-4FFF-BA2A-FDE483B920B6}</ProjectGuid>
+    <ProjectGuid>{C967FAA1-B960-4D70-A4B6-148C7FF6666C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Sales.System.UI</RootNamespace>
-    <AssemblyName>Sales.System.UI</AssemblyName>
+    <RootNamespace>SalesSystemUI</RootNamespace>
+    <AssemblyName>SalesSystemUI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\MateriaPrima\frmCadastrarMateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MateriaPrima\frmCadastrarMateriaPrima.Designer.cs">
+      <DependentUpon>frmCadastrarMateriaPrima.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -70,6 +76,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
