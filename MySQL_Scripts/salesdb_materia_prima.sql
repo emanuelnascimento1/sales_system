@@ -16,27 +16,38 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `perfil`
+-- Table structure for table `materia_prima`
 --
 
-DROP TABLE IF EXISTS `perfil`;
+DROP TABLE IF EXISTS `materia_prima`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `perfil` (
+CREATE TABLE `materia_prima` (
   `Id` int NOT NULL AUTO_INCREMENT,
-  `Nome` varchar(45) NOT NULL,
+  `Data_Validade` datetime NOT NULL,
+  `Marca` varchar(200) NOT NULL,
+  `PesoKg` varchar(3) NOT NULL,
+  `Quantidade` int NOT NULL,
+  `Categoria_Id` int NOT NULL,
+  `Valor` varchar(5) NOT NULL,
+  `Fornecedor_Id` int NOT NULL,
   PRIMARY KEY (`Id`),
-  UNIQUE KEY `Id_UNIQUE` (`Id`)
+  UNIQUE KEY `Id_UNIQUE` (`Id`),
+  UNIQUE KEY `Marca_UNIQUE` (`Marca`),
+  KEY `FK_MP_CMP_idx` (`Categoria_Id`),
+  KEY `FK_PM_Fornecedor_idx` (`Fornecedor_Id`),
+  CONSTRAINT `FK_MP_CMP` FOREIGN KEY (`Categoria_Id`) REFERENCES `categoria_materia_prima` (`Id`),
+  CONSTRAINT `FK_PM_Fornecedor` FOREIGN KEY (`Fornecedor_Id`) REFERENCES `fornecedor` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `perfil`
+-- Dumping data for table `materia_prima`
 --
 
-LOCK TABLES `perfil` WRITE;
-/*!40000 ALTER TABLE `perfil` DISABLE KEYS */;
-/*!40000 ALTER TABLE `perfil` ENABLE KEYS */;
+LOCK TABLES `materia_prima` WRITE;
+/*!40000 ALTER TABLE `materia_prima` DISABLE KEYS */;
+/*!40000 ALTER TABLE `materia_prima` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-03 21:51:44
+-- Dump completed on 2022-03-04 23:00:30

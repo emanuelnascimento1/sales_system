@@ -16,35 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `materiaprima`
+-- Table structure for table `categoria_materia_prima`
 --
 
-DROP TABLE IF EXISTS `materiaprima`;
+DROP TABLE IF EXISTS `categoria_materia_prima`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `materiaprima` (
+CREATE TABLE `categoria_materia_prima` (
   `Id` int NOT NULL AUTO_INCREMENT,
-  `Data_Validade` datetime NOT NULL,
-  `Marca` varchar(45) NOT NULL,
-  `PesoKg` varchar(3) NOT NULL,
-  `Quantidade` int NOT NULL,
-  `Categoria_Id` int NOT NULL,
-  `Valor` varchar(5) NOT NULL,
+  `Nome` varchar(200) NOT NULL,
   PRIMARY KEY (`Id`),
-  UNIQUE KEY `Id_UNIQUE` (`Id`),
-  UNIQUE KEY `Marca_UNIQUE` (`Marca`),
-  KEY `FK_MP_CMP_idx` (`Categoria_Id`),
-  CONSTRAINT `FK_MP_CMP` FOREIGN KEY (`Categoria_Id`) REFERENCES `categoriamateriaprima` (`Id`)
+  UNIQUE KEY `Id_UNIQUE` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `materiaprima`
+-- Dumping data for table `categoria_materia_prima`
 --
 
-LOCK TABLES `materiaprima` WRITE;
-/*!40000 ALTER TABLE `materiaprima` DISABLE KEYS */;
-/*!40000 ALTER TABLE `materiaprima` ENABLE KEYS */;
+LOCK TABLES `categoria_materia_prima` WRITE;
+/*!40000 ALTER TABLE `categoria_materia_prima` DISABLE KEYS */;
+/*!40000 ALTER TABLE `categoria_materia_prima` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-03 21:51:41
+-- Dump completed on 2022-03-04 23:00:31

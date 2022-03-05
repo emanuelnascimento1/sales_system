@@ -16,27 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `categoriaproduto`
+-- Table structure for table `embalagem`
 --
 
-DROP TABLE IF EXISTS `categoriaproduto`;
+DROP TABLE IF EXISTS `embalagem`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `categoriaproduto` (
+CREATE TABLE `embalagem` (
   `Id` int NOT NULL AUTO_INCREMENT,
-  `Nome` varchar(45) NOT NULL,
+  `Nome` varchar(200) NOT NULL,
+  `Produto_Id` int NOT NULL,
   PRIMARY KEY (`Id`),
-  UNIQUE KEY `Id_UNIQUE` (`Id`)
+  UNIQUE KEY `Id_UNIQUE` (`Id`),
+  UNIQUE KEY `Produto_Id_UNIQUE` (`Produto_Id`),
+  CONSTRAINT `FK_Embalagens_Produto` FOREIGN KEY (`Produto_Id`) REFERENCES `produto` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `categoriaproduto`
+-- Dumping data for table `embalagem`
 --
 
-LOCK TABLES `categoriaproduto` WRITE;
-/*!40000 ALTER TABLE `categoriaproduto` DISABLE KEYS */;
-/*!40000 ALTER TABLE `categoriaproduto` ENABLE KEYS */;
+LOCK TABLES `embalagem` WRITE;
+/*!40000 ALTER TABLE `embalagem` DISABLE KEYS */;
+/*!40000 ALTER TABLE `embalagem` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-03 21:51:45
+-- Dump completed on 2022-03-04 23:00:34

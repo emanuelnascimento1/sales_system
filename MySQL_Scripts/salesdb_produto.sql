@@ -24,14 +24,17 @@ DROP TABLE IF EXISTS `produto`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `produto` (
   `Id` int NOT NULL AUTO_INCREMENT,
-  `Nome` varchar(45) NOT NULL,
-  `Categoria` int NOT NULL,
+  `Nome` varchar(200) NOT NULL,
+  `Categoria_Id` int NOT NULL,
   `Valor` int NOT NULL,
+  `MateriaPrima_Id` int NOT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Id_UNIQUE` (`Id`),
   UNIQUE KEY `Nome_UNIQUE` (`Nome`),
-  UNIQUE KEY `Categoria_UNIQUE` (`Categoria`),
-  CONSTRAINT `FK_Produto_CategoriaProduto` FOREIGN KEY (`Categoria`) REFERENCES `categoriaproduto` (`Id`)
+  UNIQUE KEY `Categoria_UNIQUE` (`Categoria_Id`),
+  KEY `FK_Produto_MateriaPrima_idx` (`MateriaPrima_Id`),
+  CONSTRAINT `FK_Produto_CategoriaProduto` FOREIGN KEY (`Categoria_Id`) REFERENCES `categoria_produto` (`Id`),
+  CONSTRAINT `FK_Produto_MateriaPrima` FOREIGN KEY (`MateriaPrima_Id`) REFERENCES `materia_prima` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -53,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-03 21:51:44
+-- Dump completed on 2022-03-04 23:00:33

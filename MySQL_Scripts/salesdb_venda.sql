@@ -16,37 +16,37 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tabelavendas`
+-- Table structure for table `venda`
 --
 
-DROP TABLE IF EXISTS `tabelavendas`;
+DROP TABLE IF EXISTS `venda`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tabelavendas` (
+CREATE TABLE `venda` (
   `Id` int NOT NULL AUTO_INCREMENT,
   `Loja_Id` int NOT NULL,
   `Funcionario_Id` int NOT NULL,
   `Produto_Id` int NOT NULL,
   `Lucro` varchar(45) NOT NULL,
-  `Data_Venda` datetime DEFAULT NULL,
+  `Data_Venda` datetime NOT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Id_UNIQUE` (`Id`),
   KEY `FK_TV_Lojas_idx` (`Loja_Id`),
   KEY `FK_TV_Funcionarios_idx` (`Funcionario_Id`),
   KEY `FK_TV_Produto_idx` (`Produto_Id`),
-  CONSTRAINT `FK_TV_Funcionarios` FOREIGN KEY (`Funcionario_Id`) REFERENCES `funcionarios` (`Id`),
-  CONSTRAINT `FK_TV_Lojas` FOREIGN KEY (`Loja_Id`) REFERENCES `lojas` (`Id`),
+  CONSTRAINT `FK_TV_Funcionarios` FOREIGN KEY (`Funcionario_Id`) REFERENCES `funcionario` (`Id`),
+  CONSTRAINT `FK_TV_Lojas` FOREIGN KEY (`Loja_Id`) REFERENCES `loja` (`Id`),
   CONSTRAINT `FK_TV_Produto` FOREIGN KEY (`Produto_Id`) REFERENCES `produto` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tabelavendas`
+-- Dumping data for table `venda`
 --
 
-LOCK TABLES `tabelavendas` WRITE;
-/*!40000 ALTER TABLE `tabelavendas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tabelavendas` ENABLE KEYS */;
+LOCK TABLES `venda` WRITE;
+/*!40000 ALTER TABLE `venda` DISABLE KEYS */;
+/*!40000 ALTER TABLE `venda` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-03 21:51:42
+-- Dump completed on 2022-03-04 23:00:32

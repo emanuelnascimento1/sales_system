@@ -16,27 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `categoriamateriaprima`
+-- Table structure for table `loja`
 --
 
-DROP TABLE IF EXISTS `categoriamateriaprima`;
+DROP TABLE IF EXISTS `loja`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `categoriamateriaprima` (
+CREATE TABLE `loja` (
   `Id` int NOT NULL AUTO_INCREMENT,
-  `Nome` varchar(45) NOT NULL,
+  `Nome` varchar(200) NOT NULL,
+  `Funcionario_Id` int NOT NULL,
   PRIMARY KEY (`Id`),
-  UNIQUE KEY `Id_UNIQUE` (`Id`)
+  UNIQUE KEY `Id_UNIQUE` (`Id`),
+  KEY `FK_Loja_Funcionario_idx` (`Funcionario_Id`),
+  CONSTRAINT `FK_Loja_Funcionario` FOREIGN KEY (`Funcionario_Id`) REFERENCES `funcionario` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `categoriamateriaprima`
+-- Dumping data for table `loja`
 --
 
-LOCK TABLES `categoriamateriaprima` WRITE;
-/*!40000 ALTER TABLE `categoriamateriaprima` DISABLE KEYS */;
-/*!40000 ALTER TABLE `categoriamateriaprima` ENABLE KEYS */;
+LOCK TABLES `loja` WRITE;
+/*!40000 ALTER TABLE `loja` DISABLE KEYS */;
+/*!40000 ALTER TABLE `loja` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-03 21:51:45
+-- Dump completed on 2022-03-04 23:00:33
