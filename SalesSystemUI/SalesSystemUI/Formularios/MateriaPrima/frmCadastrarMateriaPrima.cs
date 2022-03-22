@@ -31,5 +31,15 @@ namespace SalesSystemUI.Formularios.MateriaPrima
         {
 
         }
+
+        private void tbNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbFornecedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

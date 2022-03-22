@@ -1,7 +1,7 @@
 ﻿
-namespace SalesSystemUI.Formularios.MateriaPrima
+namespace SalesSystemUI.Formularios.Embalagem
 {
-    partial class frmCadastrarMateriaPrima
+    partial class frmCadastrarEmbalagem
     {
         /// <summary>
         /// Required designer variable.
@@ -32,8 +32,7 @@ namespace SalesSystemUI.Formularios.MateriaPrima
             this.lblNome = new System.Windows.Forms.Label();
             this.tbNome = new System.Windows.Forms.TextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.lblMarca = new System.Windows.Forms.Label();
-            this.tbMarca = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNome
@@ -52,7 +51,6 @@ namespace SalesSystemUI.Formularios.MateriaPrima
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(658, 20);
             this.tbNome.TabIndex = 4;
-            this.tbNome.TextChanged += new System.EventHandler(this.tbNome_TextChanged);
             // 
             // btnVoltar
             // 
@@ -63,35 +61,26 @@ namespace SalesSystemUI.Formularios.MateriaPrima
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             // 
-            // lblMarca
+            // btnCadastrar
             // 
-            this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(34, 78);
-            this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(40, 13);
-            this.lblMarca.TabIndex = 8;
-            this.lblMarca.Text = "Marca:";
-            this.lblMarca.Click += new System.EventHandler(this.label1_Click_1);
+            this.btnCadastrar.Location = new System.Drawing.Point(633, 347);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(97, 26);
+            this.btnCadastrar.TabIndex = 18;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
             // 
-            // tbMarca
-            // 
-            this.tbMarca.Location = new System.Drawing.Point(76, 75);
-            this.tbMarca.Name = "tbMarca";
-            this.tbMarca.Size = new System.Drawing.Size(658, 20);
-            this.tbMarca.TabIndex = 9;
-            // 
-            // frmCadastrarMateriaPrima
+            // frmCadastrarEmbalagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 400);
-            this.Controls.Add(this.tbMarca);
-            this.Controls.Add(this.lblMarca);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.tbNome);
             this.Controls.Add(this.lblNome);
-            this.Name = "frmCadastrarMateriaPrima";
-            this.Text = "Cadastrar Matéria Prima";
+            this.Name = "frmCadastrarEmbalagem";
+            this.Text = "Cadastrar Embalagem";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,7 +90,6 @@ namespace SalesSystemUI.Formularios.MateriaPrima
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.TextBox tbMarca;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

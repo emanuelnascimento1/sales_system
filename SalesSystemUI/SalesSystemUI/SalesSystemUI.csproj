@@ -46,16 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Embalagem\frmReporEmbalagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Embalagem\frmReporEmbalagem.Designer.cs">
+      <DependentUpon>frmReporEmbalagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Embalagem\frmCadastrarEmbalagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Embalagem\frmCadastrarEmbalagem.Designer.cs">
+      <DependentUpon>frmCadastrarEmbalagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login\frmLogar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login\frmLogar.Designer.cs">
+      <DependentUpon>frmLogar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\MateriaPrima\frmCadastrarMateriaPrima.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\MateriaPrima\frmCadastrarMateriaPrima.Designer.cs">
       <DependentUpon>frmCadastrarMateriaPrima.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\MateriaPrima\frmReposicaoMateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MateriaPrima\frmReposicaoMateriaPrima.Designer.cs">
+      <DependentUpon>frmReposicaoMateriaPrima.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Embalagem\frmReporEmbalagem.resx">
+      <DependentUpon>frmReporEmbalagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Embalagem\frmCadastrarEmbalagem.resx">
+      <DependentUpon>frmCadastrarEmbalagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login\frmLogar.resx">
+      <DependentUpon>frmLogar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MateriaPrima\frmCadastrarMateriaPrima.resx">
       <DependentUpon>frmCadastrarMateriaPrima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MateriaPrima\frmReposicaoMateriaPrima.resx">
+      <DependentUpon>frmReposicaoMateriaPrima.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
